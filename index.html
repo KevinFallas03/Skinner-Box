@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Experimento de la Caja de Skinner</title>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .box {
+      width: 400px;
+      height: 400px;
+      background-color: lightgray;
+      position: relative;
+    }
+
+    #food {
+      font-size: 80px;
+      line-height: 1;
+      position: absolute;
+      display: none;
+    }
+
+    #rat {
+      font-size: 80px;
+      line-height: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .button {
+      width: 80px;
+      height: 80px;
+      border: none;
+      border-radius: 50%;
+      margin: 0 10px;
+      font-size: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <div id="food"></div>
+    <div id="rat">&#x1F42D;</div>
+    <div class="buttons">
+      <button id="foodButton" class="button"></button>
+      <button id="shockButton" class="button"></button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
