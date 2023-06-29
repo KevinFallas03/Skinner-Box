@@ -45,7 +45,7 @@ foodButton.addEventListener('click', function() {
 });
 
 shockButton.addEventListener('click', function() {
-  document.body.style.backgroundColor = 'rgba(192, 45, 45, 0.5)';
+  document.body.style.backgroundColor = 'rgba(255, 0, 0, 0.8)';
   setTimeout(function() {
     document.body.style.backgroundColor = '';
   }, 3000);
