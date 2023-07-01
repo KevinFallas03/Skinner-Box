@@ -1,6 +1,5 @@
 var foodButton = document.getElementById('foodButton');
 var shockButton = document.getElementById('shockButton');
-var dumpButton = document.getElementById('dumpButton');
 var food = document.getElementById('food');
 var rat = document.getElementById('rat');
 var box = document.querySelector('.box');
@@ -32,9 +31,8 @@ function getRandomPosition() {
 
 foodButton.style.backgroundColor = getRandomColor();
 shockButton.style.backgroundColor = getRandomColor();
-dumpButton.style.backgroundColor = getRandomColor();
 
-foodButton.addEventListener('click', function() {
+foodButton.addEventListener('click', function () {
   foodCount++;
 
   if (foodCount === 4) {
@@ -49,7 +47,7 @@ foodButton.addEventListener('click', function() {
       food.style.left = position.x + 'px';
       food.style.display = 'block';
 
-      setTimeout(function() {
+      setTimeout(function () {
         food.style.display = 'none';
       }, 800);
     }
@@ -58,27 +56,27 @@ foodButton.addEventListener('click', function() {
   foodClickCount++;
 });
 
-shockButton.addEventListener('click', function() {
+shockButton.addEventListener('click', function () {
   document.body.style.backgroundColor = 'rgba(255, 0, 0, 0.8)';
-  setTimeout(function() {
+  setTimeout(function () {
     document.body.style.backgroundColor = '';
   }, 3000);
   foodCount = 0;
 });
 
-setInterval(function() {
+setInterval(function () {
   if (foodClickCount >= 8) {
     lightCount = 0;
     light.style.display = 'block';
     light.style.backgroundColor = 'yellow';
-    setTimeout(function() {
+    setTimeout(function () {
       light.style.backgroundColor = '';
       light.style.display = 'none';
     }, 3000);
   }
-}, 10000);
+}, 7000);
 
-foodButton.addEventListener('click', function() {
+foodButton.addEventListener('click', function () {
   if (light.style.backgroundColor === 'yellow') {
     lightCount++;
     if (lightCount === 4) {
@@ -90,7 +88,7 @@ foodButton.addEventListener('click', function() {
       food.style.left = position.x + 'px';
       food.style.display = 'block';
 
-      setTimeout(function() {
+      setTimeout(function () {
         food.style.display = 'none';
       }, 1000);
     }
