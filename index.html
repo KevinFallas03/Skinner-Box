@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-
 <head>
   <title>Experimento de la Caja de Skinner</title>
   <style>
@@ -18,7 +17,7 @@
       background-color: rgba(164, 148, 170, 1);
       position: relative;
     }
-    
+
     #food {
       font-size: 80px;
       line-height: 1;
@@ -55,22 +54,20 @@
 
     .light {
       position: absolute;
-      top: 10px;
-      /* Cambia el valor de top */
-      left: 10px;
-      /* Cambia el valor de left */
+      top: 10px; /* Cambia el valor de top */
+      left: 10px; /* Cambia el valor de left */
       width: 100px;
       height: 100px;
       border-radius: 50%;
       background-color: transparent;
-      box-shadow: 0 0 50px 50px red;
+      box-shadow: 0 0 50px 50px rgb(251, 255, 0);
       transform: translate(-50%, -50%);
       z-index: 1;
       display: none;
     }
+
   </style>
 </head>
-
 <body>
   <div class="box">
     <div id="food"></div>
@@ -79,10 +76,10 @@
     <div class="buttons">
       <button id="foodButton" class="button"></button>
       <button id="shockButton" class="button"></button>
+      <button id="dumpButton" class="button"></button>
     </div>
   </div>
 
   <script src="script.js"></script>
 </body>
-
 </html>
